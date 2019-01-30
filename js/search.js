@@ -1,8 +1,10 @@
 /*
-Title: search.js (Viral Finder)
+Title: search.js (Viral Valley)
 Coded By: Akeea White
-Date Modified: 1/28/19
+Date Modified: 1/30/19
 */
+
+// Function created by FriesFlorian
 function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){return t[n][r]})}return res}
 
 // Your use of the YouTube API must comply with the Terms of Service:
@@ -13,7 +15,7 @@ function onClientLoad() {
 }
 // Called automatically when YouTube API interface is loaded (see line 9).
 function onYouTubeApiLoad() {
-    gapi.client.setApiKey('Insert_Your_API_Key');
+    gapi.client.setApiKey('INSERT_YOUR_API_KEY');
 }
  
 // Called when the search button is clicked in the html code
@@ -30,7 +32,10 @@ function search() {
             order: "viewCount"
     });
       } else {
-        alert('please enter a value into the search');
+        //Uses .innerHTML properety to display an error message within the HTML rather than within an alertbox
+        //document.getElementById('error').innerHTML = "REQUIRED: Please enter at least one value on the search bar!";
+        //document.getElementById(response).reset
+        alert('REQUIRED: Please enter at least one value on the search bar!');
         return false;
       }
     // Send the request to the API server, call the onSearchResponse function when the data is returned
@@ -46,7 +51,9 @@ function onSearchResponse(response) {
     var results = response.result;
     $.each(results.items, function(index, item) {
         $.get("tpl/item.html", function(data) {
-            $("#response").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
+            $("#response").append(tplawesome(data, [{"videoid":item.id.videoId}]));
         });
     });
 }
+
+//Parameter "title":item.snippet.title, to be included

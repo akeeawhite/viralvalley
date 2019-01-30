@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Title: index.html (Viral Valley)
+    Coded By: Akeea White
+    Date Modified: 1/30/19
+    Purpose:
+    Viral Valley is a web application that uses the YouTube API (v3) 
+    to find the most watch videos from any keyword you type in. 
+    The page dynamically changes on submit, and fully responsive. 
+    Although it is still underdevelopment, this site is fully functional.
+    Modification(s): 
+    Removed h4 tag in item.html. Removed title parameter in search.js, 
+    and deleted .resp-header selector for h4 in style.css
+-->    
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Viral Valley // Find The Best Viral Videos in Seconds</title>        
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Plugin CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<!--Header-->
+<header class="header clearfix">
+    <div class="container my-auto text-center">
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <h1><a href="index.html">Viral Valley</a></h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--Main Section-->
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                    <div class="jumbotron">
+                    <!--<h4 class="text-center">I want to see some viral videos of?</h4>-->
+                    <!--<div id="error"></div>-->
+                    <input id="query" class="form-control text-center" placeholder="I want to see some viral videos of?" type="text"/>
+                    <div class="container">
+                        <div class="row">
+                          <div class="col-lg-12 text-center btn-spc">
+                            <button onclick="search()" class="btn btn-primary btn-xl text-center">Search</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="response"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p class="section-heading text-faded footer-text">&copy; 2018-2019. Designed and Coded by <a href="../index.html" class="text-faded">Akeea White</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Custom JavaScript -->
+<script src="js/search.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://apis.google.com/js/client.js?onload=onClientLoad"></script>
+
+<!-- Bootstrap core JS -->
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
