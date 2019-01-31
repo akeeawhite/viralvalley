@@ -13,7 +13,7 @@ function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{
 function onClientLoad() {
     gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
 }
-// Called automatically when YouTube API interface is loaded (see line 9).
+// Called automatically when YouTube API interface is loaded (see line 18).
 function onYouTubeApiLoad() {
     gapi.client.setApiKey('INSERT_YOUR_API_KEY');
 }
