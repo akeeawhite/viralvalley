@@ -1,7 +1,7 @@
 /*
 Title: search.js (Viral Valley)
 Coded By: Akeea White
-Date Modified: 2/1/19
+Date Modified: 2/2/19
 */
 
 // Function created by FriesFlorian
@@ -43,7 +43,7 @@ function search() {
 
     // Clears query results
     document.getElementById('query').value = '';
-    //document.getElementById('response').innerHTML = '';
+    document.getElementById('response').innerHTML = '';
 }
 
 // Triggered by this line: request.execute(onSearchResponse);
