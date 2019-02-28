@@ -77,4 +77,5 @@ button {margin-top: 20px;}
 footer {margin-bottom: 60px;}
 footer p {color: rgba(255, 255, 255, .8);}
 footer a {color: #43727A;}
+/*#logo {font-family: 'Lobster', cursive;}*/
 footer a:hover {color: rgba(255, 255, 255, .8); text-decoration: none;}
